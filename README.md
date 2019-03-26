@@ -36,6 +36,10 @@ stack exec sol1-exe csv_file_directory_argument phone_num_argument
 
 stack exec sol1-exe . 0979895645
 
+- output:
+
+looks for all-file.csv file under current test directory 
+
 ### Note:
 - CSV files should be encoded in UTF8. 
 - Those CSV files should be saved with "ensure file end with a line break" activated in the text editor.
