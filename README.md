@@ -5,7 +5,7 @@ phone_number|message_id|send_Date|message_content
 Question: Provide your ideas/solutions and implement on how to extract information of the customer
 with the phone_number 0981234567.
 
-# Solution:
+### Solution:
 I will stream those CSV files so that we are only holding small amount of data in the memory.
 The lazy evaluation feature of Haskell is particular suitable for dealing with infinite data on limited resources.
 In this case, I will use streaming Conduit library making explicit evaluation-as-need to this problem. 
@@ -13,7 +13,7 @@ However, it is still easy to inadvertently build up "thunks" which might fill up
 We need to use strict operations properly when handling CSV chunks. I use csv-conduit for this computation.
 The Conduit library is modeled as a monad transformer which nicely combine multiple monads as once.
 
-# Build and Exec:
+### Build and Exec:
 - stack tool installation:
 
 curl -sSL https://get.haskellstack.org/ | sh
@@ -36,7 +36,7 @@ stack exec sol1-exe csv_file_directory_argument phone_num_argument
 
 stack exec sol1-exe . 0979895645
 
-# Note:
+### Note:
 - I just use default UTF8 encoding CSV files.
 - Those CSV files should be saved with "ensure file end with a line break" activated in the text editor.
   This is needed to prevent incorrect parsing for the last line of multiple files.
