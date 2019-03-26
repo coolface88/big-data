@@ -37,7 +37,7 @@ stack exec sol1-exe csv_file_directory_argument phone_num_argument
 stack exec sol1-exe . 0979895645
 
 ### Note:
-- I just use default UTF8 encoding CSV files.
+- CSV files should be encoded in UTF8. 
 - Those CSV files should be saved with "ensure file end with a line break" activated in the text editor.
   This is needed to prevent incorrect parsing for the last line of multiple files.
   If you are not sure about those, run the following bash script to add a line break at the end to those files.
