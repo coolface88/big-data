@@ -72,3 +72,5 @@ Google Cloud DNS and more. We could also implement our own service with the equi
   Zookeeper, etcd or Kafka, this system maintains the state consistency amongst replications for services. An API gateway service is realized by 
   a reverse proxy server or an ingress controller. Some cluster management frameworks to consider are Kubernetes or Mesosphere. Some execution models
   to consider are actor model (Orleans, Erlang OTP, Java Akka) service mesh and service fabric. 
+  
+  For how to deploy, I propose a strategy as the given diagram. Please looks for the jpeg file for the diagram of the overall cluster design. Basically, we need a pipeline with CI/CD, Scm and Kubernetes Infra combined. 
